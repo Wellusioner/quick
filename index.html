@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Home</title>
+</head>
+<body>
+  
+  <div id="home">
+    <div class="sidebar-wrapper">
+      <div id="sidebar">
+        <div class="logo-wrapper">
+          <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
+        </div>
+        <div class="sidebar-menu">
+          <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="#!">
+            <img src="./images/side1.svg" alt="">
+            Главная
+          </a>
+          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="#!">
+            <img src="./images/side2.svg" alt="">
+            Профили
+          </a>
+          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="#!">
+            <img src="./images/side3.svg" alt="">
+            Клиенты
+          </a>
+          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="#!">
+            <img src="./images/side4.svg" alt="">
+            UZB
+          </a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="p-3">
+        <div class="d-flex justify-content-end align-items-center">
+            <a class="ms-4 has-badge" href="#!"><img src="./images/ring.svg" alt=""></a>
+            <a class="ms-4" href="#!"><img src="./images/message.svg" alt=""></a>
+            <div class="position-relative ms-4 user-profile d-flex align-items-center">
+              <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
+              <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
+              
+              <div class="user-dropdown">
+                <a class="d-block" href="#!">Dashboard</a>
+                <a class="d-block" href="#!">Profile</a>
+                <a class="d-block" href="#!">Settings</a>
+                <a class="d-block" href="#!">Log out</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </header>
+    <div class="main-box pb-3">
+        <div class="row g-4">
+           <div class="col-md-4">
+             <div class="default-title">Статистика продаж по временной шкале</div>
+             <div id="chart1"></div>
+           </div>
+           <div class="col-md-3">
+             <div class="default-title">Топ 3 продаваемых профилей</div>
+             <div id="chart2"></div>
+           </div>
+           <div class="col-md-5">
+             <div class="default-title">Общая статистика по продажам</div>
+             <div id="chart3"></div>
+           </div>
+           <div class="col-md-7">
+              <div class="default-title">Статистика по локациям</div>
+             <div id="map"></div>
+           </div>
+           <div class="col-md-5">
+            <div class="default-title">Статистика возвратов</div>
+             <div id="chart4"></div>
+           </div>
+          <div class="col-md-7">
+            <div class="client-wrapper">
+             <div class="client-title default-title">Топ 3 локальных клиентов</div>
+             <div class="row client-group text-center">
+               <div class="col-md-4">
+                 <div class="client-item py-4 px-2">
+                   <div class="client-name">Анастасия Шпирко</div>
+                   <img class="client-image" src="./images/client1.png" alt="">
+                   <div class="client-address">Навои,Aldox</div>
+                   <p class="client-job">IMZO Showroom</p>
+                   <span class="client-money">125 млн</span>
+                 </div>
+               </div>
+               <div class="col-md-4">
+                 <div class="client-item py-4 px-2">
+                   <div class="client-name">Артем Расстанаев</div>
+                   <img class="client-image" src="./images/client2.png" alt="">
+                   <div class="client-address">Ташкент,Aldox 2</div>
+                   <p class="client-job">AKFA Innovation</p>
+                   <span class="client-money">80 млн</span>
+                 </div>
+               </div>
+               <div class="col-md-4">
+                 <div class="client-item py-4 px-2">
+                   <div class="client-name">Анастасия Черкашина</div>
+                   <img class="client-image" src="./images/client3.png" alt="">
+                   <div class="client-address">Навои,Aldox</div>
+                   <p class="client-job">Джамий 1</p>
+                   <span class="client-money">50 млн</span>
+                 </div>
+               </div>
+             </div>
+           </div>
+          </div>
+          <div class="col-md-5">
+            <div class="default-title">Топ 3 видов затрат</div>
+            <div class="view-group">
+              <div class="view-item d-flex align-items-center justify-content-between py-3 px-2">
+                <div class="view-context">
+                  <p class="view-title">Наличка</p>
+                  <span class="text-blue weight-700">115 млн сум</span>
+                </div>
+                <div class="text-center view-content">
+                  <div class="view-percent weight-700 text-secondary mb-2">+15%</div>
+                  <img src="./images/view1.jpg" alt="">
+                </div>
+              </div>
+              <div class="view-item d-flex align-items-center justify-content-between py-3 px-2">
+                <div class="view-context">
+                  <p class="view-title">Терминал</p>
+                  <span class="text-red weight-700">115 млн сум</span>
+                </div>
+                <div class="text-center view-content">
+                  <div class="view-percent weight-700 text-secondary mb-2">-10%</div>
+                  <img src="./images/view2.jpg" alt="">
+                </div>
+              </div>
+              <div class="view-item d-flex align-items-center justify-content-between py-3 px-2">
+                <div class="view-context">
+                  <p class="view-title">Перечисление</p>
+                  <span class="text-green weight-700">115 млн сум</span>
+                </div>
+                <div class="text-center view-content">
+                  <div class="view-percent weight-700 text-secondary mb-2">+25%</div>
+                  <img src="./images/view3.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <script src="./js/apexcharts.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

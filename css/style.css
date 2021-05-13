@@ -1,0 +1,269 @@
+@import './bootstrap-grid.min.css';
+
+:root{
+  --secondary: #7B828A;
+  --green: #44D7B6;
+  --red: #F55945;
+  --primaryBlue: #0091FF;
+  --secondaryBlue: #3E8DB8;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  list-style: none;
+  color: #000;
+}
+a{
+  display: inline-block;
+}
+img{
+  display: inline-block;
+  max-width: 100%;
+}
+
+/*general style starts*/
+
+.has-bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.text-center{
+  text-align: center;
+}
+.default-title{
+  line-height: 24px;
+  color: #001737;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+.position-relative{
+  position: relative;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.text-blue{
+  color: var(--primaryBlue);
+}
+.text-red{
+  color: var(--red);
+}
+.text-green{
+  color: var(--green);
+}
+.text-secondary{
+  color: var(--secondary);
+}
+
+.weight-700{
+  font-weight: 700;
+}
+.weight-500{
+  font-weight: 500;
+}
+/*general style ends*/
+
+
+
+body{
+  font-family: Helvetica, sans-serif;
+  color: #000;
+  overflow-x: hidden;
+  padding-left: 320px;
+}
+
+#sidebar{
+  position: fixed;
+  padding-top: 20px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  z-index: 10;
+  background: linear-gradient(214.79deg, #3D4C5D 3.19%, #3FBFFF 137.05%);
+}
+.logo-wrapper{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.sidebar-menu{
+  padding-top: 20px;
+}
+.logo-wrapper img{
+  display: inline-block;
+  max-width: 100%;
+}
+.menu-item{
+  position: relative;
+  font-size: 15px;
+  line-height: 17px;
+  color: #fff;
+  opacity: 0.6;
+  border-left: 2px solid transparent;
+  transition: opacity 0.2s linear,
+              border 0.2s linear;
+}
+/*
+.menu-item.active::before{
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('../images/circle1.png') no-repeat center;
+  background-size: contain;
+  height: 100px;
+  width: 50px;
+}
+*/
+.menu-item.active{
+  opacity: 1;
+  border-left-color: #fff;
+}
+.menu-item img{
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.has-badge{
+  position: relative;
+}
+.has-badge::before{
+  position: absolute;
+  content: '';
+  top: -7px;
+  right: -7px;
+  border-radius: 50%;
+  background-color: var(--red);
+  height: 10px;
+  width: 10px;
+}
+
+.user-image{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  min-width: 150px;
+  background: #fff;
+  box-shadow: 0 3px 30px rgb(0 0 0 / 10%);
+  padding: 5px 0;
+  top: calc(100% + 20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+.user-dropdown::after{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: -15px;
+  height: 20px;
+  width: 100%;
+}
+.user-dropdown::before{
+  position: absolute;
+  content: '';
+  top: -7px;
+  right: 30px;
+  border-width: 8px;
+  border-color: #fff #fff transparent transparent;
+  border-style: solid;
+  transform: rotate(-45deg);
+  
+}
+.user-dropdown a{
+  padding: 8px 20px;
+  transition: background 0.2s linear;
+}
+
+.user-profile.active .user-dropdown{
+  top: calc(100% + 15px);
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.client-group .client-item{
+  background: #FFFFFF;
+  border: 1px solid #F6F5F5;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 48px rgba(176, 192, 237, 0.423998);
+  border-radius: 12px;
+}
+.client-name{
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+.client-image{
+  margin-bottom: 10px;
+}
+.client-address{
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--secondaryBlue);
+}
+.client-job{
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.4;
+}
+.client-money{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  color: var(--primaryBlue);
+}
+
+.view-group .view-item{
+  border-top: 1px solid #ddd;
+}
+.view-group .view-item:first-child{
+  border-top: none;
+}
+.view-title{
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+/*Charts style starts*/
+
+.bar-tooltip span{
+  font-size: 18px;
+}
+
+#chart4 .apexcharts-tooltip {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/*Charts style ends*/
+
+
+
+
+
+
+
+@media (min-width: 768px){
+  .user-dropdown a:hover{
+    background-color: rgba(0,0,0,0.03);
+  }
+  .menu-item:hover{
+    opacity: 1;
+/*    border-left-color: #fff;*/
+  }  
+}
