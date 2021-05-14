@@ -1,3 +1,4 @@
+const header = document.querySelector('header');
 const profileArrow = document.querySelector('.user-arrow');
 const userProfile = document.querySelector('.user-profile');
 
@@ -7,6 +8,21 @@ profileArrow.addEventListener('click', function(){
 userProfile.addEventListener('mouseleave', function(){
   userProfile.classList.remove('active');
 });
+
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 50){
+    header.classList.add('active');
+  }else{
+    header.classList.remove('active');
+  }
+});
+
+
+new MiniBar('.table-wrapper', {
+  hideBars: false,
+  alwaysShowBars: true,
+});
+
 
 
 //Setting default values to CHART
@@ -56,6 +72,7 @@ window.Apex = {
 }
 
 //Chart1
+
 var options1 = {
   chart: {
     type: "area",
@@ -153,8 +170,12 @@ var options1 = {
     }
   }
 };
-var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
-chart1.render();
+
+if(document.querySelector("#chart1")){
+  var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+  chart1.render();
+}
+
 
 //Chart2
 var options2 = {
@@ -240,8 +261,10 @@ var options2 = {
       }
   }
 };
-var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
-chart2.render();
+if(document.querySelector("#chart2")){
+  var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+  chart2.render();
+}
 
 //Chart3
 var options3 = {
@@ -347,8 +370,10 @@ var options3 = {
     show: false,
   }
 };
-var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
-chart3.render();
+if(document.querySelector("#chart3")){
+  var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+  chart3.render();
+}
 
 //Chart4
 var options4 = {
@@ -443,5 +468,176 @@ var options4 = {
     },
   }
 };
-var chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
-chart4.render();
+if(document.querySelector("#chart4")){
+  var chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
+  chart4.render();
+}
+
+//Chart5
+var options5 = {
+  chart: {
+    type: "pie",
+    foreColor: '#414141',
+    height: 200,
+  },
+  colors: ['#65AFD6', '#3E9167'],
+  stroke: {
+    width: 0
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      type: 'vertical',
+      shadeIntensity: 0,
+      opacityFrom: 0.8,
+      opacityTo: 1,
+      colorsStops: [0,50,100]
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val) {
+        return val + '%'
+    },
+    distributed: true,
+    style: {
+        fontSize: '15px',
+        fontFamily: 'Helvetica, sans-serif',
+        fontWeight: '400',
+        colors: ['#fff']
+    },
+    background: {
+      enabled: false,
+    },
+    dropShadow: {
+        enabled: false,
+    }
+  },
+  series: [55, 45],
+  labels: ['Навои', 'Ташкент'],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: false,
+  },  
+  plotOptions: {
+    pie: {
+      expandOnClick: false,
+      offsetX: 0,
+      offsetY: 10,
+      customScale: 1,
+      dataLabels: {
+          offset: -18,
+      }, 
+      donut: {
+        size: '100%',
+        background: 'transparent',
+        labels: {
+          show: false,
+        }
+      },      
+    }
+  },
+  legend: {
+      fontFamily: 'Helvetica, sans-serif',
+      position: 'bottom',
+      horizontalAlign: 'center', 
+      inverseOrder: true,
+      offsetY: -3,
+      onItemClick: {
+        toggleDataSeries: false
+      },
+      onItemHover: {
+          highlightDataSeries: false
+      },
+  }
+};
+if(document.querySelector("#chart5")){
+  var chart5 = new ApexCharts(document.querySelector("#chart5"), options5);
+  chart5.render();
+}
+
+//Chart6
+var options6 = {
+  chart: {
+    type: "area",
+    height: 205,
+  },
+  colors: ["#3E85AE"],
+  stroke: {
+    show: true,
+    curve: 'smooth',
+    lineCap: 'round',
+    colors: ['#999'],
+    width: 1,
+    dashArray: 0,      
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 0,
+      opacityFrom: 0,
+      opacityTo: 0,
+      type: 'horizontal'
+    }
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  markers: {
+    size: 6,
+    colors: ['#fff'],
+    strokeWidth: 5,
+    strokeColors: '#0091FF',
+    fillOpacity: 1,
+    hover: {
+      size: 6,
+    }
+  },
+  grid: {
+    show: false,
+  },
+  series: [
+    {
+      data: [200, 210, 250, 280,]
+    }
+  ],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: false,
+  },
+  labels: [
+    "ИЮНЬ",
+    "ИЮЛЬ",
+    "АВГУСТ",
+    "СЕНТЯБРЬ",
+  ],
+  xaxis: {
+    labels: {
+      style: {
+        fontSize: '9px',
+        fontFamily: 'Helvetica, sans-serif',
+      },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+    type: "category",
+  },
+  yaxis: {
+    show: false,
+  }
+};
+if(document.querySelector("#chart6")){
+  var chart6 = new ApexCharts(document.querySelector("#chart6"), options6);
+  chart6.render();
+}
