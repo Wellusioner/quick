@@ -172,19 +172,31 @@ body{
   transition: opacity 0.2s linear,
               border 0.2s linear;
 }
-/*
-.menu-item.active::before{
+
+.menu-item.active:before{
   position: absolute;
   content: '';
-  right: 0;
+  right: -1px;
   top: 50%;
   transform: translateY(-50%);
-  background: url('../images/circle1.png') no-repeat center;
-  background-size: contain;
+  background: url('../images/figure.png') no-repeat center;
+  background-size: 20px;
   height: 100px;
-  width: 50px;
+  width: 20px;
 }
-*/
+
+.menu-item.active:after{
+  position: absolute;
+  content: '';
+  right: -27px;
+  top: calc(50% + -2px);
+  transform: translateY(-50%);
+  background: url(../images/circle.svg) no-repeat center;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+}
+
 .menu-item.active{
   opacity: 1;
   border-left-color: #fff;
@@ -485,6 +497,39 @@ header.active{
   font-family:'Helvetica', sans-serif;
   font-size: 12px;
   fill: rgb(5, 55, 94);
+}
+
+.map-tooltip{
+  position: absolute;
+  padding: 10px;
+  visibility: hidden;
+  color: #fff;
+  transition: opacity 0.2s linear;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(0deg, #3D4C5D, #3D4C5D);
+  border-radius: 10px;
+}
+.map-tooltip::before{
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  left: 50%;
+  transform: rotate(45deg) translateX(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent #3D4C5D  #3D4C5D transparent;
+}
+.map-tooltip span{
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.map-tooltip.active{
+  visibility: visible;
+  opacity: 1;
 }
 
 /*Charts style starts*/

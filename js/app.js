@@ -941,7 +941,7 @@ var options10 = {
   colors: ["#137AD6"],
   plotOptions: {
     heatmap: {
-      shadeIntensity: 0.5,
+      shadeIntensity: 0,
       enableShades: true,
       radius: 10,
       useFillColorAsStroke: false,
