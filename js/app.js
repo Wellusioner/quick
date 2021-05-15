@@ -17,11 +17,13 @@ window.addEventListener('scroll', function(){
   }
 });
 
+if(document.querySelector('.table-wrapper')){
+  new MiniBar('.table-wrapper', {
+    hideBars: false,
+    alwaysShowBars: true,
+  });
+}
 
-new MiniBar('.table-wrapper', {
-  hideBars: false,
-  alwaysShowBars: true,
-});
 
 
 
@@ -76,6 +78,7 @@ window.Apex = {
 var options1 = {
   chart: {
     type: "area",
+    height: 270
   },
   colors: ["#1C77D6"],
   stroke: {
@@ -132,21 +135,6 @@ var options1 = {
   xaxis: {
     crosshairs: {
       show: false,
-//      width: 0,
-//      position: "front",
-//      opacity: 1,
-//      stroke: {
-//        color: "#bfc5cc",
-//        width: 1,
-//        dashArray: 2
-//      },
-//      dropShadow: {
-//        enabled: false,
-//        top: 0,
-//        left: 0,
-//        blur: 1,
-//        opacity: 0.4
-//      }
     },
     labels: {
       format: "",
@@ -181,7 +169,7 @@ if(document.querySelector("#chart1")){
 var options2 = {
   chart: {
     type: "bar",
-    height: 195,
+    height: 260,
   },
   colors: ['#6CB276', '#66C6F8', '#FE6158'],
   stroke: {
@@ -640,4 +628,463 @@ var options6 = {
 if(document.querySelector("#chart6")){
   var chart6 = new ApexCharts(document.querySelector("#chart6"), options6);
   chart6.render();
+}
+
+//Chart7
+var options7 = {
+  chart: {
+    type: "donut",
+    foreColor: '#414141',
+    height: 200,
+  },
+  colors: ['#EA6566', '#7AD2DE', '#529FF9'],
+  stroke: {
+    width: 0
+  },
+  fill: {
+    type: "solid",
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val) {
+        return val.toPrecision(2) + "%"
+    },
+    distributed: true,
+    style: {
+        fontSize: '15px',
+        fontFamily: 'Helvetica, sans-serif',
+        fontWeight: '400',
+        colors: ['#fff']
+    },
+    background: {
+      enabled: false,
+      foreColor: '#fff',
+      padding: 5,
+      // borderRadius: 50,
+      borderWidth: 0,
+      // borderColor: '#fff',
+      opacity: 1,
+      dropShadow: {
+        enabled: false,
+        top: 1,
+        left: 1,
+        blur: 2,
+        color: '#000',
+        opacity: 0.15
+      }
+    },
+    dropShadow: {
+      enabled: false,
+    }
+  },
+  series: [26, 30,54],
+  labels: ['Аксессуары','Алюминиевые Профиля', 'ПВХ Профиля',],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: false,
+  },  
+  plotOptions: {
+    pie: {
+      expandOnClick: false,
+      offsetX: 0,
+      offsetY: 10,
+      customScale: 1,
+      dataLabels: {
+          offset: 0,
+      }, 
+      donut: {
+        size: '50%',
+        labels: {
+          show: false,
+        }
+      },      
+    }
+  },
+  legend: {
+      fontFamily: 'Helvetica, sans-serif',
+      position: 'right',
+      horizontalAlign: 'center', 
+      inverseOrder: true,
+      offsetY: 50,
+      onItemClick: {
+        toggleDataSeries: false
+      },
+      onItemHover: {
+          highlightDataSeries: false
+      },
+  }
+};
+if(document.querySelector("#chart7")){
+  var chart7 = new ApexCharts(document.querySelector("#chart7"), options7);
+  chart7.render();
+}
+
+//Chart8
+var options8 = {
+  chart: {
+    type: "line",
+  },
+  colors: ["#147AD6", '#79D2DE', '#EC6666'],
+  stroke: {
+    enabled: true,
+    width: 1
+  },
+  dataLabels: {
+    enabled: false
+  },
+  markers: {
+    size: 3,
+    colors: undefined,
+    strokeColors: '',
+    strokeWidth: 0,
+    strokeOpacity: 0.9,
+    strokeDashArray: 0,
+    fillOpacity: 1,
+    discrete: [],
+    shape: "circle",
+    radius: 2,
+    offsetX: 0,
+    offsetY: 0,
+    onClick: undefined,
+    onDblClick: undefined,
+    showNullDataPoints: true,
+    hover: {
+      size: undefined,
+      sizeOffset: 3
+    }
+  },
+  grid: {
+    show: true,
+    strokeDashArray: 0,
+    borderColor: '#D6D9DC',
+  },
+  series: [
+    {
+      name: 'ПВХ Профиля',
+      data: [5,10,25,23,43,33]
+    },
+    {
+      name: 'Алюминиевые Профиля',
+      data: [10,20,30,40,22,35]
+    },
+    {
+      name: 'Аксессуары',
+      data: [28,35,28,40,35,33]
+    }
+  ],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: false,
+  },
+  labels: [
+    "ЯНВ",
+    "ФЕВ",
+    "МАР",
+    "АПР",
+    "МАЙ",
+    "ИЮНЬ",
+  ],
+  xaxis: {
+    labels: {
+      format: "",
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+    type: "category",
+    crosshairs: {
+      show: false,
+    },
+  },
+  yaxis: {
+    min: 0,
+    forceNiceScale: true,
+    labels: {
+      formatter: function (val) {
+        if(val === 0){
+          return 0
+        }
+        return val;
+      }
+    },
+  }
+};
+if(document.querySelector("#chart8")){
+  var chart8 = new ApexCharts(document.querySelector("#chart8"), options8);
+  chart8.render();
+}
+
+//Chart9
+var options9 = {
+  chart: {
+    type: "bar",
+    height: 195,
+  },
+  colors: ['#6CB276', '#66C6F8', '#FE6158', '#7B74F6', '#FFAE6F', '#E3EC79'],
+  stroke: {
+    enabled: false
+  },
+  grid: {
+    show: true,
+    borderColor: '#F5F5F5',
+    strokeDashArray: 0,
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      type: 'vertical',
+      shadeIntensity: 0,
+      opacityFrom: 0.85,
+      opacityTo: 1,
+      colorsStops: [0,50,100]
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  series: [
+    {
+      data: [200,500,700,500,100,200]
+    }
+  ],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: false,
+  },
+  labels: [
+    "Наманган",
+    "Ташкент",
+    "Бухара",
+    "Навои",
+    "Хоразм",
+    "Самарқанд",
+  ],
+  xaxis: {
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+    type: "category",
+  },
+  yaxis: {
+    labels: {
+      format: '',
+    },
+    tooltip: {
+      enabled: false
+    },
+  },
+  plotOptions: {
+      bar: {
+        startingShape: "rounded",
+        endingShape: "rounded",
+        borderRadius: 12,
+        columnWidth: '25%',
+        distributed: true,
+      }
+  },
+  legend: {
+      fontFamily: 'Helvetica, sans-serif',
+      fontSize: '11px',
+      markers: {
+          radius: 12,
+      },
+      itemMargin: {
+        horizontal: 5,
+    },
+  }
+};
+if(document.querySelector("#chart9")){
+  var chart9 = new ApexCharts(document.querySelector("#chart9"), options9);
+  chart9.render();
+}
+      
+var options10 = {
+  series: [
+    {
+      name: "9:00 - 12:00",
+      data: [ 12, 43, 304, 78, 101, 403, 500 ]
+    },
+    {
+      name: "13:00 - 16:00",
+      data:  [ 45, 205, 346, 504, 12, 45, 65, ]
+    },
+    {
+      name: "16:00 - 18:00",
+      data:  [ 596, 78, 101, 520, 423, 310, 285, ]
+    }
+  ],
+  chart: {
+    height: 250,
+    type: 'heatmap',
+  },
+  colors: ["#137AD6"],
+  plotOptions: {
+    heatmap: {
+      shadeIntensity: 0.5,
+      enableShades: true,
+      radius: 10,
+      useFillColorAsStroke: false,
+      colorScale: {
+        ranges: [{
+            from: 0,
+            to: 25,
+            name: '25',
+            color: '#7ED3DE'
+          },
+          {
+            from: 26,
+            to: 50,
+            name: '50',
+            color: '#79D2DD'
+          },
+          {
+            from: 51,
+            to: 75,
+            name: '75',
+            color: '#7AD2DE'
+          },
+          {
+            from: 76,
+            to: 100,
+            name: '100',
+            color: '#45C1FF'
+          },
+          {
+            from: 101,
+            to: 200,
+            name: '200',
+            color: '#3EBFFE'
+          },
+          {
+            from: 201,
+            to: 300,
+            name: '300',
+            color: '#1379D5'
+          },
+          {
+            from: 301,
+            to: 400,
+            name: '400',
+            color: '#1C7FD6'
+          },
+          {
+            from: 401,
+            to: 10000,
+            name: '500',
+            color: '#137AD6'
+          }
+        ]
+      }
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: 10
+  },
+  tooltip: {
+    enabled: false
+  },
+  title: {
+    show: false
+  },
+  xaxis: {
+    categories: [
+      "ПН",
+      "ВТ",
+      "СР",
+      "ЧТ",
+      "ПТ",
+      "СБ",
+      "ВС"
+    ],
+    position: 'top',
+  },
+  yaxis: {
+    reversed: true,
+  },
+  legend: {
+    fontSize: '14px',
+    fontFamily: 'Helvetica, sans-serif',
+    position: 'bottom',
+    formatter: function(a){
+      if(a == '25'){
+        return '0'
+      }else
+      if(a == '100'){
+        return '100'
+      } else
+      if(a == '500'){
+        return '500+'
+      }
+      return ''
+    },
+    itemMargin: {
+      horizontal: 5,
+      vertical: 0
+    },
+    onItemClick: {
+      toggleDataSeries: false
+    },
+    onItemHover: {
+        highlightDataSeries: false
+    },
+  }
+};
+
+if(document.querySelector("#chart10")){
+  var chart10 = new ApexCharts(document.querySelector("#chart10"), options10);
+  chart10.render();
+}
+
+
+ymaps.ready(init);
+
+function init(){ 
+
+  let center = mapData.length ? mapData[0].cords : [40.768810, 72.236280];
+
+  var myMap = new ymaps.Map("map", {
+    center,
+    zoom: 10,
+    controls: ['zoomControl', 'rulerControl']
+  });
+
+  mapData.forEach(function(item){
+    const content = '<div>'+
+      '<div>' + item.name + '</div>' +
+      '<div class="weight-700">' + item.text +'</div>' +
+    '</div>';
+
+    const placemark = new ymaps.Placemark(item.cords, {
+      balloonContent: content,
+      iconContent: 'Icon Content'
+    },{
+      preset: "islands#circleDotIcon",
+      iconColor: '#0000ff'
+    });
+    myMap.geoObjects.add(placemark);
+  });
 }

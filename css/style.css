@@ -267,7 +267,7 @@ header.active{
   pointer-events: visible;
 }
 
-.client-group .client-item{
+.client-item{
   background: #FFFFFF;
   border: 1px solid #F6F5F5;
   box-sizing: border-box;
@@ -375,11 +375,13 @@ header.active{
   color: #001737;
 }
 .sum-title{
-  position: relative;
-  padding-left: 12px;
   color: #001737;
 }
-.sum-title::before{
+.sum-badge{
+  position: relative;
+  padding-left: 12px;
+}
+.sum-badge::before{
   position: absolute;
   content: '';
   left: 0;
@@ -388,8 +390,17 @@ header.active{
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: linear-gradient(180deg, rgba(38, 213, 89, 0.7) -52.77%, rgba(49, 96, 41, 0.7) 154.58%);
+  background: #eee;
   border-radius: 11px;
+}
+.sum-badge.sum-badge-red::before{
+  background: var(--red);
+}
+.sum-badge.sum-badge-green::before{
+  background: var(--green);
+}
+.sum-badge.sum-badge-blue::before{
+  background: var(--primaryBlue);
 }
 .sum-amount{
   color: #001737;
@@ -401,9 +412,18 @@ header.active{
   background: #E5E9F2;
 }
 .sum-bar div{
-  background: linear-gradient(180deg, rgba(38, 213, 89, 0.7) -52.77%, rgba(49, 96, 41, 0.7) 154.58%);
+  background: #eee;
   border-radius: 11px;
   height: 6px;
+}
+.sum-bar.sum-bar-red div{
+  background: var(--red);
+}
+.sum-bar.sum-bar-green div{
+  background: var(--green);
+}
+.sum-bar.sum-bar-blue div{
+  background: var(--primaryBlue);
 }
 
 .overall-number{
@@ -427,6 +447,9 @@ header.active{
 .client-table{
   border-collapse: collapse;
 }
+.client-table th{
+  vertical-align: top;
+}
 .client-table th,
 .client-table td{
   padding: 8px;
@@ -444,9 +467,25 @@ header.active{
 }
 /* Clients page ends */
 
-
-
-
+#map{
+  filter: grayscale(1);
+  height: 280px;
+}
+.uzb-map .region-item{
+  fill: #018CC2;
+  stroke: #fff;
+}
+.uzb-map .region:hover .region-item {
+  fill: #019FDE;
+}
+.region .region-rectangle{
+  fill:#FFFFFF;
+}
+.region .region-name{
+  font-family:'Helvetica', sans-serif;
+  font-size: 12px;
+  fill: rgb(5, 55, 94);
+}
 
 /*Charts style starts*/
 
@@ -478,7 +517,9 @@ header.active{
   box-shadow: none;
   background-color: transparent;
 }
-
+#chart10 .apexcharts-legend.position-bottom .apexcharts-legend-series{
+  flex-direction: column;
+}
 /*Charts style ends*/
 
 
