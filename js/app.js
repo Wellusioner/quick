@@ -1,6 +1,20 @@
 const header = document.querySelector('header');
 const profileArrow = document.querySelector('.user-arrow');
 const userProfile = document.querySelector('.user-profile');
+const hamburger = document.querySelector('.hamburger');
+const body = document.querySelector('body');
+const closeBtn = document.querySelector('.close-button');
+const mask = document.querySelector('.mask');
+
+hamburger.addEventListener('click', function(){
+  body.classList.add('open');
+});
+closeBtn.addEventListener('click', function(){
+  body.classList.remove('open');
+});
+mask.addEventListener('click', function(){
+  body.classList.remove('open');
+});
 
 profileArrow.addEventListener('click', function(){
   userProfile.classList.toggle('active');
@@ -1059,32 +1073,35 @@ if(document.querySelector("#chart10")){
   chart10.render();
 }
 
+if(document.getElementById('map')){
 
-ymaps.ready(init);
+  function init(){ 
 
-function init(){ 
-
-  let center = mapData.length ? mapData[0].cords : [40.768810, 72.236280];
-
-  var myMap = new ymaps.Map("map", {
-    center,
-    zoom: 10,
-    controls: ['zoomControl', 'rulerControl']
-  });
-
-  mapData.forEach(function(item){
-    const content = '<div>'+
-      '<div>' + item.name + '</div>' +
-      '<div class="weight-700">' + item.text +'</div>' +
-    '</div>';
-
-    const placemark = new ymaps.Placemark(item.cords, {
-      balloonContent: content,
-      iconContent: 'Icon Content'
-    },{
-      preset: "islands#circleDotIcon",
-      iconColor: '#0000ff'
+    let center = mapData.length ? mapData[0].cords : [40.768810, 72.236280];
+  
+    var myMap = new ymaps.Map("map", {
+      center,
+      zoom: 10,
+      controls: ['zoomControl', 'rulerControl']
     });
-    myMap.geoObjects.add(placemark);
-  });
+  
+    mapData.forEach(function(item){
+      const content = '<div>'+
+        '<div>' + item.name + '</div>' +
+        '<div class="weight-700">' + item.text +'</div>' +
+      '</div>';
+  
+      const placemark = new ymaps.Placemark(item.cords, {
+        balloonContent: content,
+        iconContent: 'Icon Content'
+      },{
+        preset: "islands#circleDotIcon",
+        iconColor: '#0000ff'
+      });
+      myMap.geoObjects.add(placemark);
+    });
+  }
+
+  ymaps.ready(init);
 }
+

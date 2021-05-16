@@ -9,343 +9,351 @@
 <body>
   
   <div id="home">
-    <div class="sidebar-wrapper">
-      <div id="sidebar">
-        <div class="logo-wrapper">
-          <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
-        </div>
-        <div class="sidebar-menu">
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./index.html">
-            <img src="./images/side1.svg" alt="">
-            Главная
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./profiles.html">
-            <img src="./images/side2.svg" alt="">
-            Профили
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./clients.html">
-            <img src="./images/side3.svg" alt="">
-            Клиенты
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
-            <img src="./images/side4.svg" alt="">
-            UZB
-          </a>
-        </div>
+    
+    <div id="sidebar">
+      <div class="logo-wrapper">
+        <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
       </div>
+      <div class="sidebar-menu">
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 " href="./index.html">
+          <img src="./images/side1.svg" alt="">
+          Главная
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./profiles.html">
+          <img src="./images/side2.svg" alt="">
+          Профили
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./clients.html">
+          <img src="./images/side3.svg" alt="">
+          Клиенты
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
+          <img src="./images/side4.svg" alt="">
+          UZB
+        </a>
+      </div>
+      <span class="d-lg-none close-button">&times;</span>
     </div>
+    <div class="mask"></div>
     <header>
       <div class="p-3">
-        <div class="d-flex justify-content-end align-items-center">
-            <a class="ms-4 has-badge" href="#!"><img src="./images/ring.svg" alt=""></a>
-            <a class="ms-4" href="#!"><img src="./images/message.svg" alt=""></a>
-            <div class="position-relative ms-4 user-profile d-flex align-items-center">
-              <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
-              <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
-              
-              <div class="user-dropdown">
-                <a class="d-block" href="#!">Dashboard</a>
-                <a class="d-block" href="#!">Profile</a>
-                <a class="d-block" href="#!">Settings</a>
-                <a class="d-block" href="#!">Log out</a>
+        <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+            <img class="mobile-logo d-lg-none" width="150px" src="./images/logo.svg" alt="">
+            <div class="d-flex align-items-center">
+              <a class="ms-4 has-badge" href="#!"><img src="./images/ring.svg" alt=""></a>
+              <a class="ms-4" href="#!"><img src="./images/message.svg" alt=""></a>
+              <div class="position-relative ms-4 user-profile d-flex align-items-center">
+                <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
+                <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
+                
+                <div class="user-dropdown">
+                  <a class="d-block" href="#!">Dashboard</a>
+                  <a class="d-block" href="#!">Profile</a>
+                  <a class="d-block" href="#!">Settings</a>
+                  <a class="d-block" href="#!">Log out</a>
+                </div>
               </div>
+              <img class="d-lg-none hamburger cursor-pointer ms-2" src="./images/hamburger.svg" alt="">
             </div>
           </div>
       </div>
     </header>
+
     <div class="main-box pb-3">
-      <div class="row g-4 me-0">
-        <div class="col-md-7">
-          <div class="bordered px-3 py-4">
-            <div class="default-title fs-12">Общаяя статистика по клиентам</div>
-            <div class="row statistic-group">
-              <div class="col-md-4 statistic-item">
-                <span class="statistic-number">1315</span>
-                <p class="statistic-text">Лояльных клиентов</p>
-              </div>
-              <div class="col-md-4 statistic-item">
-                <span class="statistic-number">Aldox 2</span>
-                <p class="statistic-text">Самый востребованный продукт</p>
-              </div>
-              <div class="col-md-4 statistic-sum">
-                <div class="sum-title sum-badge sum-badge-green">Сумма (в сум)</div>
-                <span class="d-block sum-amount my-2">321млн</span>
-                <div class="sum-bar sum-bar-green" style="width: 100%;">
-                  <div style="width: 75%;"></div>
+      <div class="ps-lg-0 pe-lg-2 px-2">
+        <div class="row g-4 me-0">
+          <div class="col-md-7">
+            <div class="bordered px-3 py-4">
+              <div class="default-title fs-12">Общаяя статистика по клиентам</div>
+              <div class="row g-3 statistic-group">
+                <div class="col-md-4 statistic-item">
+                  <span class="statistic-number">1315</span>
+                  <p class="statistic-text">Лояльных клиентов</p>
                 </div>
-              </div>
-            </div> 
-          </div>
-          <div class="py-4">
-            <div class="d-inline-block select-wrapper mx-2 no-icon">
-              <select class="day-select" name="location">
-                <option value="loc" selected disabled>Локация</option>
-                <option value="loc1">Location 1</option>
-                <option value="loc2">Location 2</option>
-              </select>
-            </div>
-            <div class="d-inline-block select-wrapper mx-2 no-icon">
-              <select class="day-select" name="product">
-                <option value="product" selected disabled>Продукт</option>
-                <option value="product1">Product 1</option>
-                <option value="product2">Product 2</option>
-              </select>
-            </div>
-            <div class="d-inline-block select-wrapper mx-2 no-icon">
-              <select class="day-select" name="payment">
-                <option value="payment" selected disabled>Оплата</option>
-                <option value="payment1">Payment 1</option>
-                <option value="payment2">Payment 2</option>
-              </select>
-            </div>
-          </div>
-          <div class="table-wrapper">
-            <table class="client-table w-100">
-              <thead align="left">
-                <tr>
-                  <th>Имя</th>
-                  <th>Локация</th>
-                  <th>Продукт</th>
-                  <th>Оплата</th>
-                  <th>Сумма</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client1.png" alt="">
-                      <span>Babila Ebwélé</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox</div> </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client2.png" alt="">
-                      <span>Brijamohan Mallick</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client1.png" alt="">
-                      <span>Babila Ebwélé</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox</div> </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client2.png" alt="">
-                      <span>Brijamohan Mallick</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client1.png" alt="">
-                      <span>Babila Ebwélé</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox</div> </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client2.png" alt="">
-                      <span>Brijamohan Mallick</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client1.png" alt="">
-                      <span>Babila Ebwélé</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox</div> </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client2.png" alt="">
-                      <span>Brijamohan Mallick</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client1.png" alt="">
-                      <span>Babila Ebwélé</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox</div> </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client2.png" alt="">
-                      <span>Brijamohan Mallick</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client1.png" alt="">
-                      <span>Babila Ebwélé</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox</div> </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client2.png" alt="">
-                      <span>Brijamohan Mallick</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client1.png" alt="">
-                      <span>Babila Ebwélé</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox</div> </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="me-2" width="30px" src="./images/client2.png" alt="">
-                      <span>Brijamohan Mallick</span>
-                    </div>
-                  </td>
-                  <td> Ташкент </td>
-                  <td> Aldox </td>
-                  <td> Наличка </td>
-                  <td> <span class="table-money text-green">55млн</span> </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="default-title">Общаяя статистикка клиентов</div>
-          <div class="row">
-            <div class="col-md-7">
-              <div class="d-flex align-items-center">
-                <div><img src="./images/arrow-up-green.svg" alt=""></div>
-                <div class="text-center">
-                  <p class="overall-number fs-30 mb-1 text-secondary">105</p>
-                  <span class="overall-text text-uppercase">Неделю</span>
+                <div class="col-md-4 statistic-item">
+                  <span class="statistic-number">Aldox 2</span>
+                  <p class="statistic-text">Самый востребованный продукт</p>
                 </div>
-                <div class="divider-v" style="height: 45px;"></div>
-                <div class="text-center">
-                  <p class="overall-number fs-30 mb-1 text-secondary">251</p>
-                  <span class="overall-text text-uppercase">Месяц</span>
-                </div>
-              </div>
-              <div id="chart6"></div>
-            </div>
-            <div class="col-md-5">
-              <div class="d-flex align-items-center">
-                <div class="me-2"><img src="./images/arrow-up-blue.svg" alt=""></div>
-                <span class="overall-percent fs-30 weight-700">+25%</span>
-              </div>
-              <div class="text-center py-4">
-                <p class="view-title weight-700">Наличка</p>
-                <span class="text-blue2 weight-700">115 млн сум</span>
-              </div>
-              <img class="d-block w-100" src="./images/view1.jpg" alt="">
-            </div>
-          </div>
-          <div class="row gx-2 gy-4">
-            <div class="col-md-5">
-              <div class="default-title">Лучшие регионы продаж</div>
-              <div id="chart5"></div>
-            </div>
-            <div class="col-md-7">
-              <div class="default-title">Топ 3 продаваемых профилей</div>
-              <div id="chart2"></div>
-            </div>
-            <div class="col-12">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="default-title title-badge fs-13 mb-0">Статистика возвратов</div>
-                <div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="progress-title">Общее: 5135 тон</span> 
-                    <div class="progress-wrapper" style="width: 80px;">
-                      <div class="progress-bar progress-green" style="width: 100%;"></div>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <div class="progress-title">Возврат: 3748.5 тон</div>
-                    <div class="progress-wrapper" style="width: 80px;">
-                      <div class="progress-bar progress-red" style="width: 75%;"></div>
-                    </div>
+                <div class="col-md-4 statistic-sum">
+                  <div class="sum-title sum-badge sum-badge-green">Сумма (в сум)</div>
+                  <span class="d-block sum-amount my-2">321млн</span>
+                  <div class="sum-bar sum-bar-green" style="width: 100%;">
+                    <div style="width: 75%;"></div>
                   </div>
                 </div>
+              </div> 
+            </div>
+            <div class="py-4">
+              <div class="d-inline-block select-wrapper mx-2 no-icon">
+                <select class="day-select" name="location">
+                  <option value="loc" selected disabled>Локация</option>
+                  <option value="loc1">Location 1</option>
+                  <option value="loc2">Location 2</option>
+                </select>
               </div>
-              <div id="chart4"></div>
+              <div class="d-inline-block select-wrapper mx-2 no-icon">
+                <select class="day-select" name="product">
+                  <option value="product" selected disabled>Продукт</option>
+                  <option value="product1">Product 1</option>
+                  <option value="product2">Product 2</option>
+                </select>
+              </div>
+              <div class="d-inline-block select-wrapper mx-2 no-icon">
+                <select class="day-select" name="payment">
+                  <option value="payment" selected disabled>Оплата</option>
+                  <option value="payment1">Payment 1</option>
+                  <option value="payment2">Payment 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="client-table w-100">
+                <thead align="left">
+                  <tr>
+                    <th>Имя</th>
+                    <th>Локация</th>
+                    <th>Продукт</th>
+                    <th>Оплата</th>
+                    <th>Сумма</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox</div> </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client2.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox</div> </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client2.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox</div> </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client2.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox</div> </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client2.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox</div> </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client2.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox</div> </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client2.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client1.png" alt="">
+                        <span>Babila Ebwélé</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox</div> </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img class="me-2" width="30px" src="./images/client2.png" alt="">
+                        <span>Brijamohan Mallick</span>
+                      </div>
+                    </td>
+                    <td> Ташкент </td>
+                    <td> Aldox </td>
+                    <td> Наличка </td>
+                    <td> <span class="table-money text-green">55млн</span> </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
+          <div class="col-md-5">
+            <div class="default-title">Общаяя статистикка клиентов</div>
+            <div class="row">
+              <div class="col-xl-7 col-md-12 col-sm-6">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div><img src="./images/arrow-up-green.svg" alt=""></div>
+                  <div class="text-center">
+                    <p class="overall-number fs-30 mb-1 text-secondary">105</p>
+                    <span class="overall-text text-uppercase">Неделю</span>
+                  </div>
+                  <div class="divider-v" style="height: 45px;"></div>
+                  <div class="text-center">
+                    <p class="overall-number fs-30 mb-1 text-secondary">251</p>
+                    <span class="overall-text text-uppercase">Месяц</span>
+                  </div>
+                </div>
+                <div id="chart6"></div>
+              </div>
+              <div class="col-xl-5 col-md-12 col-sm-6">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="me-2"><img src="./images/arrow-up-blue.svg" alt=""></div>
+                  <span class="overall-percent fs-30 weight-700">+25%</span>
+                </div>
+                <div class="text-center py-4">
+                  <p class="view-title weight-700">Наличка</p>
+                  <span class="text-blue2 weight-700">115 млн сум</span>
+                </div>
+                <img style="max-width: 150px; margin:auto;" class="d-block w-100" src="./images/view1.jpg" alt="">
+              </div>
+            </div>
+            <div class="row gx-2 gy-4">
+              <div class="col-xl-5 col-md-12 col-sm-6">
+                <div class="default-title">Лучшие регионы продаж</div>
+                <div id="chart5"></div>
+              </div>
+              <div class="col-xl-7 col-md-12 col-sm-6">
+                <div class="default-title">Топ 3 продаваемых профилей</div>
+                <div id="chart2"></div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex flex-xl-row flex-md-column flex-row justify-content-between align-items-center align-items-xl-center align-items-md-start mb-2">
+                  <div class="default-title title-badge fs-13">Статистика возвратов</div>
+                  <div>
+                    <div class="d-flex align-items-center mb-1">
+                      <span class="progress-title">Общее: 5135 тон</span> 
+                      <div class="progress-wrapper" style="width: 80px;">
+                        <div class="progress-bar progress-green" style="width: 100%;"></div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="progress-title">Возврат: 3748.5 тон</div>
+                      <div class="progress-wrapper" style="width: 80px;">
+                        <div class="progress-bar progress-red" style="width: 75%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="chart4"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
   </div>
   
   <script src="./js/minibar.min.js"></script>

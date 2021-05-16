@@ -9,7 +9,16 @@
   --secondaryBlue: #3E8DB8;
 }
 
-*{
+body{
+  font-family: Helvetica, sans-serif;
+  color: #000;
+  overflow-x: hidden;
+  padding-left: 310px;
+  padding-top: 80px;
+  margin: 0;
+}
+
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -17,6 +26,11 @@
   border: none;
   list-style: none;
   color: #000;
+  box-sizing: border-box;
+}
+.container-fluid{
+  margin-right: auto;
+  margin-left: auto;
 }
 a{
   display: inline-block;
@@ -132,13 +146,7 @@ img{
 /*general style ends*/
 
 
-body{
-  font-family: Helvetica, sans-serif;
-  color: #000;
-  overflow-x: hidden;
-  padding-left: 310px;
-  padding-top: 80px;
-}
+
 
 #sidebar{
   position: fixed;
@@ -454,10 +462,10 @@ header.active{
 
 .table-wrapper {
   max-height: 610px;
-  overflow-y: auto;
 }
 .client-table{
   border-collapse: collapse;
+  min-width: 500px;
 }
 .client-table th{
   vertical-align: top;
@@ -581,4 +589,79 @@ header.active{
     opacity: 1;
 /*    border-left-color: #fff;*/
   }  
+}
+img.mobile-logo {
+  filter: invert(1);
+}
+
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.2s linear;
+  z-index: 13;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+span.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 26px;
+  padding: 0 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+body.open{
+  overflow-y: hidden;
+  padding-right: 17px;
+}
+body.open header{
+  padding-right: 17px;
+}
+body.open #sidebar{
+  transform: translateX(0);
+}
+body.open .mask{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: visible;
+}
+@media (max-width: 1999px){
+  .day-select, .day-item label {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .day-select {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 991px){
+  body{
+    padding-left: 0;
+  }
+
+  #sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.2s linear;
+  }
+
+  .menu-item.active:before,
+  .menu-item.active:after{
+    display: none;
+  }
+  header{
+    box-shadow: 0 1px 2px rgb(0,0,0,0.05);
+  }
+
+  
 }

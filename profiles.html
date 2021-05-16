@@ -4,39 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Clients</title>
+  <title>Profiles</title>
 </head>
 <body>
   
   <div id="home">
-    <div class="sidebar-wrapper">
-      <div id="sidebar">
-        <div class="logo-wrapper">
-          <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
-        </div>
-        <div class="sidebar-menu">
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./index.html">
-            <img src="./images/side1.svg" alt="">
-            Главная
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./profiles.html">
-            <img src="./images/side2.svg" alt="">
-            Профили
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./clients.html">
-            <img src="./images/side3.svg" alt="">
-            Клиенты
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
-            <img src="./images/side4.svg" alt="">
-            UZB
-          </a>
-        </div>
+    <div id="sidebar">
+      <div class="logo-wrapper">
+        <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
       </div>
+      <div class="sidebar-menu">
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 " href="./index.html">
+          <img src="./images/side1.svg" alt="">
+          Главная
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./profiles.html">
+          <img src="./images/side2.svg" alt="">
+          Профили
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./clients.html">
+          <img src="./images/side3.svg" alt="">
+          Клиенты
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
+          <img src="./images/side4.svg" alt="">
+          UZB
+        </a>
+      </div>
+      <span class="d-lg-none close-button">&times;</span>
     </div>
+    <div class="mask"></div>
     <header>
       <div class="p-3">
-        <div class="d-flex justify-content-end align-items-center">
+        <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+          <img class="mobile-logo d-lg-none" width="150px" src="./images/logo.svg" alt="">
+          <div class="d-flex align-items-center">
             <a class="ms-4 has-badge" href="#!"><img src="./images/ring.svg" alt=""></a>
             <a class="ms-4" href="#!"><img src="./images/message.svg" alt=""></a>
             <div class="position-relative ms-4 user-profile d-flex align-items-center">
@@ -50,275 +52,315 @@
                 <a class="d-block" href="#!">Log out</a>
               </div>
             </div>
+            <img class="d-lg-none hamburger cursor-pointer ms-2" src="./images/hamburger.svg" alt="">
           </div>
+        </div>
       </div>
     </header>
     <div class="main-box pb-3">
-      <div class="row g-4 me-0">
-        <div class="col-md-7">
-          <div class="bordered px-3 py-4">
-            <div class="default-title fs-12">Общаяя статистика ПВХ Профилей</div>
-            <div class="row statistic-group">
-              <div class="col-md-4 statistic-item">
-                <span class="statistic-number">105,151</span>
-                <p class="statistic-text">Проданых профилей</p>
-              </div>
-              <div class="col-md-4 statistic-sum">
-                <div class="sum-title sum-badge sum-badge-green">Прибыль (в сум)</div>
-                <span class="d-block sum-amount my-2">551млн</span>
-                <div class="sum-bar sum-bar-green" style="width: 100%;">
-                  <div style="width: 75%;"></div>
+      <div class="ps-lg-0 pe-lg-2 px-2">
+        <div class="row g-4 me-0">
+          <div class="col-xl-7">
+            <div class="pb-4 pt-3">
+              <form>
+                <div class="mb-3">
+                  <input class="w-100 py-2 px-3 bordered" type="text" placeholder="Искать профиль">
                 </div>
-              </div>
-              <div class="col-md-4 statistic-sum">
-                <div class="sum-title sum-badge sum-badge-red">Возврат (в сум)</div>
-                <span class="d-block sum-amount my-2">115млн</span>
-                <div class="sum-bar sum-bar-red" style="width: 100%;">
-                  <div style="width: 25%;"></div>
-                </div>
-              </div>
-            </div> 
-          </div>
-          <div class="py-4">
-            <div class="default-title text-center">Топ продаваемых профилей</div>
-            <div class="d-inline-block select-wrapper mx-2 no-icon">
-              <select class="day-select" name="pvx">
-                <option value="pvx" selected disabled>ПВХ</option>
-                <option value="pvx1">ПВХ 1</option>
-                <option value="pvx2">ПВХ 2</option>
-              </select>
-            </div>
-            <div class="d-inline-block select-wrapper mx-2 no-icon">
-              <select class="day-select" name="type">
-                <option value="type" selected disabled>Тип</option>
-                <option value="type1">Тип 1</option>
-                <option value="type2">Тип 2</option>
-              </select>
-            </div>
-            <div class="d-inline-block select-wrapper mx-2 no-icon">
-              <select class="day-select" name="status">
-                <option value="status" selected disabled>Статус</option>
-                <option value="status1">Status 1</option>
-                <option value="status2">Status 2</option>
-              </select>
-            </div>
-          </div>
-          <div class="table-wrapper">
-            <table class="client-table w-100">
-              <thead align="left">
-                <tr>
-                  <th>№</th>
-                  <th>Наименование <br> профиля</th>
-                  <th>Тип</th>
-                  <th>Количество </th>
-                  <th>Прибыль</th>
-                  <th>Возврат</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Премиум</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Стандарт</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Эконом</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Премиум</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Стандарт</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Эконом</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Премиум</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Стандарт</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Эконом</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Премиум</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>11</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Стандарт</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Эконом</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>13</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Премиум</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>14</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Стандарт</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-                <tr>
-                  <td>15</td>
-                  <td>
-                    <div>TRIO 6000</div>
-                    ПВХ Профиль
-                  </td>
-                  <td><span>Эконом</span></td>
-                  <td><span>10512 шт.</span></td>
-                  <td><span class="text-green">+305млн</span> </td>
-                  <td><span class="text-red">-15млн</span> </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="row gx-2 gy-4">
-            <div class="col-md-12">
-              <div class="default-title">Общее количество заказов</div>
-              <div id="chart7"></div>
-            </div>
-            <div class="col-12">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="default-title title-badge fs-13 mb-0">Статистика возвратов</div>
-                <div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="progress-title">Общее: 5135 тон</span> 
-                    <div class="progress-wrapper" style="width: 80px;">
-                      <div class="progress-bar progress-green" style="width: 100%;"></div>
+                <div class="row g-3">
+                  <div class="col-md-3">
+                    <div class="select-wrapper mx-2">
+                      <select class="w-100 day-select" name="month">
+                        <option value="may" selected disabled>Май</option>
+                        <option value="june">Июнь</option>
+                        <option value="july">Июль</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <div class="progress-title">Возврат: 3748.5 тон</div>
-                    <div class="progress-wrapper" style="width: 80px;">
-                      <div class="progress-bar progress-red" style="width: 75%;"></div>
+                  <div class="col-md-5">
+                    <div class="select-wrapper mx-2">
+                      <select class="w-100 day-select" name="pvx">
+                        <option value="pvx" selected disabled>ПВХ</option>
+                        <option value="pvx1">ПВХ 1</option>
+                        <option value="pvx2">ПВХ 2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="select-wrapper mx-2">
+                      <select class="w-100 day-select" name="weekdays">
+                        <option value="monday" selected disabled>Понеделник</option>
+                        <option value="tuesdeay">Вторник</option>
+                        <option value="wednesday">Среда</option>
+                      </select>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div id="chart4"></div>
+              </form>
             </div>
-            <div class="col-md-12">
-              <div class="default-title">Временной анализ</div>
-              <div id="chart8"></div>
+            <div class="bordered px-3 py-4">
+              <div class="default-title fs-12">Общаяя статистика ПВХ Профилей</div>
+              <div class="row g-3 statistic-group">
+                <div class="col-md-4 statistic-item">
+                  <span class="statistic-number">105,151</span>
+                  <p class="statistic-text">Проданых профилей</p>
+                </div>
+                <div class="col-md-4 statistic-sum">
+                  <div class="sum-title sum-badge sum-badge-green">Прибыль (в сум)</div>
+                  <span class="d-block sum-amount my-2">551млн</span>
+                  <div class="sum-bar sum-bar-green" style="width: 100%;">
+                    <div style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 statistic-sum">
+                  <div class="sum-title sum-badge sum-badge-red">Возврат (в сум)</div>
+                  <span class="d-block sum-amount my-2">115млн</span>
+                  <div class="sum-bar sum-bar-red" style="width: 100%;">
+                    <div style="width: 25%;"></div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div class="py-4">
+              <div class="default-title text-center">Топ продаваемых профилей</div>
+              <div class="d-inline-block select-wrapper mx-2 no-icon">
+                <select class="day-select" name="pvx">
+                  <option value="pvx" selected disabled>ПВХ</option>
+                  <option value="pvx1">ПВХ 1</option>
+                  <option value="pvx2">ПВХ 2</option>
+                </select>
+              </div>
+              <div class="d-inline-block select-wrapper mx-2 no-icon">
+                <select class="day-select" name="type">
+                  <option value="type" selected disabled>Тип</option>
+                  <option value="type1">Тип 1</option>
+                  <option value="type2">Тип 2</option>
+                </select>
+              </div>
+              <div class="d-inline-block select-wrapper mx-2 no-icon">
+                <select class="day-select" name="status">
+                  <option value="status" selected disabled>Статус</option>
+                  <option value="status1">Status 1</option>
+                  <option value="status2">Status 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="client-table w-100">
+                <thead align="left">
+                  <tr>
+                    <th>№</th>
+                    <th>Наименование <br> профиля</th>
+                    <th>Тип</th>
+                    <th>Количество </th>
+                    <th>Прибыль</th>
+                    <th>Возврат</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Премиум</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Стандарт</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Эконом</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Премиум</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Стандарт</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Эконом</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Премиум</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Стандарт</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Эконом</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Премиум</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Стандарт</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Эконом</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Премиум</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Стандарт</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>
+                      <div>TRIO 6000</div>
+                      ПВХ Профиль
+                    </td>
+                    <td><span>Эконом</span></td>
+                    <td><span>10512 шт.</span></td>
+                    <td><span class="text-green">+305млн</span> </td>
+                    <td><span class="text-red">-15млн</span> </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
+          <div class="col-xl-5">
+            <div class="row gx-2 gy-4">
+              <div class="col-md-12">
+                <div class="default-title">Общее количество заказов</div>
+                <div id="chart7"></div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="default-title title-badge fs-13 mb-0">Статистика возвратов</div>
+                  <div>
+                    <div class="d-flex align-items-center mb-1">
+                      <span class="progress-title">Общее: 5135 тон</span> 
+                      <div class="progress-wrapper" style="width: 80px;">
+                        <div class="progress-bar progress-green" style="width: 100%;"></div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="progress-title">Возврат: 3748.5 тон</div>
+                      <div class="progress-wrapper" style="width: 80px;">
+                        <div class="progress-bar progress-red" style="width: 75%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="chart4"></div>
+              </div>
+              <div class="col-md-12">
+                <div class="default-title">Временной анализ</div>
+                <div id="chart8"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
   </div>
   
   <script src="./js/minibar.min.js"></script>

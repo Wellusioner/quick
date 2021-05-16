@@ -9,118 +9,125 @@
 <body>
   
   <div id="home">
-    <div class="sidebar-wrapper">
-      <div id="sidebar">
-        <div class="logo-wrapper">
-          <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
-        </div>
-        <div class="sidebar-menu">
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./index.html">
-            <img src="./images/side1.svg" alt="">
-            Главная
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./profiles.html">
-            <img src="./images/side2.svg" alt="">
-            Профили
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./clients.html">
-            <img src="./images/side3.svg" alt="">
-            Клиенты
-          </a>
-          <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
-            <img src="./images/side4.svg" alt="">
-            UZB
-          </a>
-        </div>
+
+    <div id="sidebar">
+      <div class="logo-wrapper">
+        <a class="d-block" href="#!"><img src="./images/logo.svg" alt=""></a>
       </div>
+      <div class="sidebar-menu">
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4 active" href="./index.html">
+          <img src="./images/side1.svg" alt="">
+          Главная
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./profiles.html">
+          <img src="./images/side2.svg" alt="">
+          Профили
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./clients.html">
+          <img src="./images/side3.svg" alt="">
+          Клиенты
+        </a>
+        <a class="menu-item d-flex align-items-center menu-item py-3 px-4" href="./uzb.html">
+          <img src="./images/side4.svg" alt="">
+          UZB
+        </a>
+      </div>
+      <span class="d-lg-none close-button">&times;</span>
     </div>
+    <div class="mask"></div>
     <header>
       <div class="p-3">
-        <div class="d-flex justify-content-end align-items-center">
-            <a class="ms-4 has-badge" href="#!"><img src="./images/ring.svg" alt=""></a>
-            <a class="ms-4" href="#!"><img src="./images/message.svg" alt=""></a>
-            <div class="position-relative ms-4 user-profile d-flex align-items-center">
-              <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
-              <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
-              
-              <div class="user-dropdown">
-                <a class="d-block" href="#!">Dashboard</a>
-                <a class="d-block" href="#!">Profile</a>
-                <a class="d-block" href="#!">Settings</a>
-                <a class="d-block" href="#!">Log out</a>
+        <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+            <img class="mobile-logo d-lg-none" width="150px" src="./images/logo.svg" alt="">
+            <div class="d-flex align-items-center">
+              <a class="ms-4 has-badge" href="#!"><img src="./images/ring.svg" alt=""></a>
+              <a class="ms-4" href="#!"><img src="./images/message.svg" alt=""></a>
+              <div class="position-relative ms-4 user-profile d-flex align-items-center">
+                <div class="user-image has-bg" style="background-image: url('./images/client1.png')"></div>
+                <span class="cursor-pointer d-inline-block p-2 user-arrow"><img src="./images/down-arrow.svg" alt=""></span>
+                
+                <div class="user-dropdown">
+                  <a class="d-block" href="#!">Dashboard</a>
+                  <a class="d-block" href="#!">Profile</a>
+                  <a class="d-block" href="#!">Settings</a>
+                  <a class="d-block" href="#!">Log out</a>
+                </div>
               </div>
+              <img class="d-lg-none hamburger cursor-pointer ms-2" src="./images/hamburger.svg" alt="">
             </div>
           </div>
       </div>
     </header>
+    
     <div class="main-box pb-3">
-        <div class="row g-4 me-0">
-            <div class="col-md-4">
-              <div class="default-title">Статистика продаж по временной шкале</div>
-              <div id="chart1"></div>
-            </div>
-            <div class="col-md-3">
-              <div class="default-title">Топ 3 продаваемых профилей</div>
-              <div id="chart2"></div>
-            </div>
-            <div class="col-md-5">
-              <div class="d-flex align-items-center  pb-4">
-                <div class="select-wrapper mx-2">
-                  <select class="day-select weight-700" name="" id="">
-                    <option value="2021">2021г.</option>
-                    <option value="2021">2022г.</option>
-                    <option value="2021">2023г.</option>
-                  </select>
-                </div>
-                <div class="day-item mx-2">
-                  <input id="day1" type="radio" name="day" checked>
-                  <label for="day1">Q1</label>
-                </div>
-                <div class="day-item mx-2">
-                  <input id="day2" type="radio" name="day">
-                  <label for="day2">Q2</label>
-                </div>
-                <div class="day-item mx-2">
-                  <input id="day3" type="radio" name="day">
-                  <label for="day3">Q3</label>
-                </div>
-                <div class="day-item mx-2">
-                  <input id="day4" type="radio" name="day">
-                  <label for="day4">Q4</label>
-                </div>
+      <div class="ps-lg-0 pe-lg-2 px-2">
+        <div class="row g-4">
+          <div class="col-xl-4 col-md-6">
+            <div class="default-title">Статистика продаж по временной шкале</div>
+            <div id="chart1"></div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="default-title">Топ 3 продаваемых профилей</div>
+            <div id="chart2"></div>
+          </div>
+          <div class="col-xl-5 col-md-6">
+            <div class="d-flex align-items-center  pb-4">
+              <div class="select-wrapper mx-2">
+                <select class="day-select weight-700" name="" id="">
+                  <option value="2021">2021г.</option>
+                  <option value="2021">2022г.</option>
+                  <option value="2021">2023г.</option>
+                </select>
               </div>
-              <div class="default-title">Общая статистика по продажам</div>
-              <div id="chart3"></div>
+              <div class="day-item mx-2">
+                <input id="day1" type="radio" name="day" checked>
+                <label for="day1">Q1</label>
+              </div>
+              <div class="day-item mx-2">
+                <input id="day2" type="radio" name="day">
+                <label for="day2">Q2</label>
+              </div>
+              <div class="day-item mx-2">
+                <input id="day3" type="radio" name="day">
+                <label for="day3">Q3</label>
+              </div>
+              <div class="day-item mx-2">
+                <input id="day4" type="radio" name="day">
+                <label for="day4">Q4</label>
+              </div>
             </div>
-            <div class="col-md-7">
-              <div class="default-title">Статистика по локациям</div>
-              <div id="map"></div>
-            </div>
-            <div class="col-md-5">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="default-title title-badge fs-13 mb-0">Статистика возвратов</div>
-                <div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="progress-title">Общее: 5135 тон</span> 
-                    <div class="progress-wrapper" style="width: 80px;">
-                      <div class="progress-bar progress-green" style="width: 100%;"></div>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <div class="progress-title">Возврат: 3748.5 тон</div>
-                    <div class="progress-wrapper" style="width: 80px;">
-                      <div class="progress-bar progress-red" style="width: 75%;"></div>
-                    </div>
+            <div class="default-title">Общая статистика по продажам</div>
+            <div id="chart3"></div>
+          </div>
+          <div class="col-xl-7 col-md-6">
+            <div class="default-title">Статистика по локациям</div>
+            <div id="map"></div>
+          </div>
+          <div class="col-xl-5">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="default-title title-badge fs-13 mb-0">Статистика возвратов</div>
+              <div>
+                <div class="d-flex align-items-center mb-1">
+                  <span class="progress-title">Общее: 5135 тон</span> 
+                  <div class="progress-wrapper" style="width: 80px;">
+                    <div class="progress-bar progress-green" style="width: 100%;"></div>
                   </div>
                 </div>
+                <div class="d-flex align-items-center">
+                  <div class="progress-title">Возврат: 3748.5 тон</div>
+                  <div class="progress-wrapper" style="width: 80px;">
+                    <div class="progress-bar progress-red" style="width: 75%;"></div>
+                  </div>
+                </div>
               </div>
-              <div id="chart4"></div>
             </div>
-          <div class="col-md-7">
+            <div id="chart4"></div>
+          </div>
+          <div class="col-xl-7">
             <div class="client-wrapper">
               <div class="client-title default-title">Топ 3 локальных клиентов</div>
-              <div class="row client-group text-center">
-                <div class="col-md-4">
+              <div class="row g-4 justify-content-center client-group text-center">
+                <div class="col-md-4 col-sm-4 col-10">
                   <div class="client-item py-4 px-2">
                     <div class="client-name">Анастасия Шпирко</div>
                     <img class="client-image" src="./images/client1.png" alt="">
@@ -129,7 +136,7 @@
                     <span class="client-money">125 млн</span>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4 col-10">
                   <div class="client-item py-4 px-2">
                     <div class="client-name">Артем Расстанаев</div>
                     <img class="client-image" src="./images/client2.png" alt="">
@@ -138,7 +145,7 @@
                     <span class="client-money">80 млн</span>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4 col-10">
                   <div class="client-item py-4 px-2">
                     <div class="client-name">Анастасия Черкашина</div>
                     <img class="client-image" src="./images/client3.png" alt="">
@@ -150,7 +157,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-xl-5">
             <div class="default-title">Топ 3 видов затрат</div>
             <div class="view-group">
               <div class="view-item d-flex align-items-center justify-content-between py-3 px-2">
@@ -186,6 +193,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
   </div>
   <script>
