@@ -5,6 +5,14 @@ const hamburger = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 const closeBtn = document.querySelector('.close-button');
 const mask = document.querySelector('.mask');
+const menuChanger = document.querySelectorAll('.menu-circle');
+
+menuChanger.forEach(function(item){
+  item.addEventListener('click', function(e){
+    e.preventDefault();
+    body.classList.toggle('collapsed');
+  });
+});
 
 hamburger.addEventListener('click', function(){
   body.classList.add('open');
@@ -37,9 +45,24 @@ if(document.querySelector('.table-wrapper')){
     alwaysShowBars: true,
   });
 }
+const selects = document.querySelectorAll('.day-select');
 
-
-
+selects.forEach(function(item){
+  NiceSelect.bind(item);
+});
+if(document.getElementById('datepicker')){
+  const picker = new Litepicker({ 
+    element: document.getElementById('datepicker'),
+    singleMode: false,
+    tooltipText: {
+      one: 'day',
+      other: 'days'
+    },
+    tooltipNumber: (totalDays) => {
+      return totalDays - 1;
+    } 
+  });
+}
 
 //Setting default values to CHART
 window.Apex = {
