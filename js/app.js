@@ -815,7 +815,7 @@ var options8 = {
     text: undefined,
   },
   tooltip: {
-    enabled: false,
+    enabled: true,
   },
   labels: [
     "ЯНВ",
@@ -891,6 +891,7 @@ var options9 = {
   },
   series: [
     {
+      name: '',
       data: [200,500,700,500,100,200]
     }
   ],
@@ -898,7 +899,12 @@ var options9 = {
     text: undefined,
   },
   tooltip: {
-    enabled: false,
+    enabled: true,
+    y: {
+      formatter: function(a){
+        return a
+      },
+    },
   },
   labels: [
     "Наманган",
@@ -1095,6 +1101,323 @@ if(document.querySelector("#chart10")){
   var chart10 = new ApexCharts(document.querySelector("#chart10"), options10);
   chart10.render();
 }
+
+
+//Chart11
+var config1 = {
+  chart: {
+    type: "area",
+    height: 60
+  },
+  colors: ["#0091FF"],
+  stroke: {
+    enabled: true,
+    width: 2
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.9,
+      opacityTo: 0.5
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  markers: {
+    size: 0,
+  },
+  grid: {
+    show: false,
+    padding:{
+      top: -20,
+      bottom: -20
+    },
+    strokeDashArray: 0,
+    borderColor: '#C1BED9',
+  },
+  series: [
+    {
+      name: '',
+      data: [15,30,5,80,22,55,13,73]
+    }
+  ],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: true,
+    y: {
+      format: function(a){return a}
+    },
+    x: {
+      show: false
+    }
+  },
+  labels: [
+    "Яни",
+    "Фев",
+    "Мар",
+    "Апр",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Авг",
+  ],
+  xaxis: {
+    show: false,
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+    type: "category",
+    crosshairs: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+    min: 0,
+    forceNiceScale: true,
+    labels: {
+      formatter: function (val) {
+        if(val === 0){
+          return 0
+        }
+        return val.toPrecision(2) + '%';
+      }
+    },
+  }
+};
+if(document.querySelector("#cash_chart")){
+  var cashChart = new ApexCharts(document.querySelector("#cash_chart"), config1);
+  cashChart.render();
+}
+//Chart12
+var config2 = {
+  chart: {
+    type: "area",
+    height: 60
+  },
+  colors: ["#F55945"],
+  stroke: {
+    enabled: true,
+    width: 2
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.9,
+      opacityTo: 0.5
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  markers: {
+    size: 0,
+  },
+  grid: {
+    show: false,
+    padding: {
+      top: -20,
+      bottom: -20
+    },
+    strokeDashArray: 5,
+    borderColor: '#C1BED9',
+  },
+  series: [
+    {
+      name: '',
+      data: [15,30,5,80,22,55,13,73]
+    }
+  ],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: true,
+    y: {
+      format: function(a){return a}
+    },
+    x: {
+      show: false
+    }
+  },
+  labels: [
+    "Яни",
+    "Фев",
+    "Мар",
+    "Апр",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Авг",
+  ],
+  xaxis: {
+    show: false,
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+    type: "category",
+    crosshairs: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+    min: 0,
+    forceNiceScale: true,
+    labels: {
+      formatter: function (val) {
+        if(val === 0){
+          return 0
+        }
+        return val.toPrecision(2) + '%';
+      }
+    },
+  }
+};
+if(document.querySelector("#terminal_chart")){
+  var terminalChart = new ApexCharts(document.querySelector("#terminal_chart"), config2);
+  terminalChart.render();
+}
+
+//Chart13
+var config3 = {
+  chart: {
+    type: "area",
+    height: 60
+  },
+  colors: ["#44D7B6"],
+  stroke: {
+    enabled: true,
+    width: 2
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.9,
+      opacityTo: 0.5
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  markers: {
+    size: 0,
+  },
+  grid: {
+    show: false,
+    padding: {
+      top: -20,
+      bottom: -20
+    },
+    strokeDashArray: 5,
+    borderColor: '#C1BED9',
+  },
+  series: [
+    {
+      name: '',
+      data: [15,30,5,80,22,55,13,73]
+    }
+  ],
+  title: {
+    text: undefined,
+  },
+  tooltip: {
+    enabled: true,
+    y: {
+      format: function(a){return a}
+    },
+    x: {
+      show: false
+    }
+  },
+  labels: [
+    "Яни",
+    "Фев",
+    "Мар",
+    "Апр",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Авг",
+  ],
+  xaxis: {
+    show: false,
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+    type: "category",
+    crosshairs: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+    min: 0,
+    forceNiceScale: true,
+    labels: {
+      formatter: function (val) {
+        if(val === 0){
+          return 0
+        }
+        return val.toPrecision(2) + '%';
+      }
+    },
+  }
+};
+if(document.querySelector("#withdraw_chart")){
+  var withDrawChart = new ApexCharts(document.querySelector("#withdraw_chart"), config3);
+  withDrawChart.render();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if(document.getElementById('map')){
 

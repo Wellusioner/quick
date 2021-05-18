@@ -177,7 +177,10 @@ body.collapsed #sidebar{
 .logo-wrapper{
   padding-top: 20px;
   padding-left: 15px;
-  padding-right: 10px;
+  padding-right: 14px;
+}
+.logo-wrapper a{
+  overflow: hidden;
 }
 .sidebar-menu{
   padding-top: 20px;
@@ -418,6 +421,9 @@ header.active{
 .nice-select-dropdown{
   width: 100%;
 }
+.nice-select .list{
+  max-height: 300px;
+}
 .no-icon .day-select{
   background-image: none;
   padding-left: 10px;
@@ -625,7 +631,9 @@ header.active{
 }
 
 /*Charts style starts*/
-
+.extra-chart{
+  max-width: 150px;
+}
 .progress-title{
   font-size: 12px;
   display: inline-block;
