@@ -273,7 +273,7 @@ var options2 = {
       bar: {
         startingShape: "rounded",
         endingShape: "rounded",
-          borderRadius: 10,
+          borderRadius: 8,
           columnWidth: '30%',
           distributed: true,
       }
@@ -941,7 +941,7 @@ var options9 = {
       bar: {
         startingShape: "rounded",
         endingShape: "rounded",
-        borderRadius: 12,
+        borderRadius: 10,
         columnWidth: '25%',
         distributed: true,
       }
