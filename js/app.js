@@ -741,10 +741,10 @@ var options7 = {
   },
   legend: {
       fontFamily: 'Helvetica, sans-serif',
-      position: 'right',
+      position: window.innerWidth > 575 ? 'right' : 'bottom',
       horizontalAlign: 'center', 
       inverseOrder: true,
-      offsetY: 50,
+      offsetY:  window.innerWidth > 575 ? 50 : 0,
       onItemClick: {
         toggleDataSeries: false
       },
