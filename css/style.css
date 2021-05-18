@@ -275,6 +275,8 @@ header.active{
 .user-image{
   height: 40px;
   width: 40px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
 }
 .user-dropdown {
@@ -775,4 +777,13 @@ body.open .mask{
             box-shadow: 0 1px 2px rgb(0,0,0,0.05);
   }
 
+}
+
+@media(max-width: 575px){
+  header a img{
+    min-width: 18px;
+  }
+  .mobile-logo{
+    width: 100px;
+  }
 }
